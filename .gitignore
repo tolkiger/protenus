@@ -4,6 +4,17 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
+.terraform
+.DS_Store
+.DS_Store?
+._*
+.Trashes
+Thumbs.db
+desktop.ini
+.idea
+.vscode
+**/*~
+*.swp
 
 # Crash log files
 crash.log
