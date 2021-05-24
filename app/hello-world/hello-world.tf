@@ -3,16 +3,12 @@ module "hello-world" {
   source = "../../modules/ecs_fargate"
 
   ecs_cluster_name = local.full_ecs_name
-  //  ecs_sg                     = [data.terraform_remote_state.infrastructure.outputs.web_sg]
-  //  ecs_subnets                = [module.hello-world.subnet_group]
   lb_hc_path            = var.lb_hc_path
   lb_internal           = var.lb_internal
   lb_s3_log_bucket_name = "protenus-access-log-bucket"
-  //  lb_sg                      = [data.terraform_remote_state.infrastructure.outputs.web_sg]
   lb_ssl_cert                = var.lb_ssl_cert
   lb_subnets                 = ["172.19.2.0/24"]
   lb_tg_deregistration_delay = var.lb_tg_deregistration_delay
-  //  route53_zone_id            = [data.terraform_remote_state.global.outputs.route53_autoalert_com_zone_id]
   vpc_id   = module.hello-world.vpc_id
   vpc_name = var.vpc_name
 
